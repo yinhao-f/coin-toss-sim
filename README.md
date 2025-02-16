@@ -3,7 +3,7 @@
 ***
 ### Coin pattern
 Your coin produces heads with probability $p$. You flip your coin $n≥3$ times. What is the expected number of times that the pattern $HTH$ appears?
-Example: If the $n$ flips are $⟨H,T,H,T,H,T,H⟩$ then the pattern $HTH$ appears three times.
+Example: If the $n$ flips are $⟨H,T,H,T,H,T,H⟩$ then the pattern $HTH$ appears three times. [1, Ch. 4, p. 77]
 ## Solution
 ***
 Let $X$ be the number of times the $HTH$ pattern appears. Then $$X \sim Binomial(n-2,p^2(1-p))$$ and $$E[X]=(n-2)p^2(1-p)$$
@@ -35,6 +35,8 @@ Using formula (n-2)(1-p)p^2 when p = 0.5: 0.375
 ```
 ## Acknowledgements
 ***
+[1] M. Harchol-Balter, Introduction to probability for computing. Cambridge, United Kingdom ; New York, NY, USA: Cambridge University Press, 2024.
+
 I asked [DeepSeek](https://chat.deepseek.com/) to eliminate my recursive function calls to generate all coin flip outcomes. Here is its response:
 
 <blockquote>
