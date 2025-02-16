@@ -1,19 +1,16 @@
 # A simple program to verify the expectation formula
 ## Problem description
-***
 ### Coin pattern
 Your coin produces heads with probability $p$. You flip your coin $n≥3$ times. What is the expected number of times that the pattern $HTH$ appears?
 Example: If the $n$ flips are $⟨H,T,H,T,H,T,H⟩$ then the pattern $HTH$ appears three times. [1, Ch. 4, p. 77]
 ## Solution
-***
 Let $X$ be the number of times the $HTH$ pattern appears. Then $$X \sim Binomial(n-2,p^2(1-p))$$ and $$E[X]=(n-2)p^2(1-p)$$
 ## Attempting to prove using code
-***
-I wrote this Java program to simulate $n$ flips of a fair coin where $p=0.5$ (to make my life easier). 
-It prompts the user for an input of $n$, and displays all possible outcomes with an $HTH$ pattern inside it and $X$ of that outcome. Note that `true` represents $H$ and `false` represents $T$. 
-It will then display the $n$, total number of outcomes for each possible value of $X$, and the summed expectation using the definition of $E[X]$, where $$E[X]=\sum_x{xProb[X=x]}$$ It will also calculate $E[X]$ using the solution $E[X]=(n-2)p^2(1-p)$ so we can check if the values match. 
+I wrote this Java program to simulate $n$ flips of a fair coin where $p=0.5$ (to make my life easier). <br>
+It prompts the user for an input of $n$, and displays all possible outcomes with an $HTH$ pattern inside it and $X$ of that outcome. Note that `true` represents $H$ and `false` represents $T$. <br>
+It will then display the $n$, total number of outcomes for each possible value of $X$, and the summed expectation using the definition of $E[X]$, where $$E[X]=\sum_x{xProb[X=x]}$$ <br>
+It will also calculate $E[X]$ using the solution $E[X]=(n-2)p^2(1-p)$ so we can check if the values match. 
 ### Sample run
-***
 ```
 Input number of flips: 5
 [true, true, true, false, true] number of HTH: 1
@@ -34,7 +31,6 @@ E[X] = 0.375
 Using formula (n-2)(1-p)p^2 when p = 0.5: 0.375
 ```
 ## Acknowledgements
-***
 [1] M. Harchol-Balter, Introduction to probability for computing. Cambridge, United Kingdom ; New York, NY, USA: Cambridge University Press, 2024.
 
 I asked [DeepSeek](https://chat.deepseek.com/) to eliminate my recursive function calls to generate all coin flip outcomes. Here is its response:
